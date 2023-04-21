@@ -1,0 +1,215 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  /* background-color: #3c3c3c; */
+  background-color: lightgrey;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+#ui-rpg {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.rpg-container {
+  width: 650px; /* adjust as needed */
+  height: 400px; /* adjust as needed */
+  margin: auto;
+  border: 3px solid #000;
+  background-color: #f1f1f199;
+  position: relative;
+  border-radius:15px;
+}
+.rpg-text-box {
+  width: 650px; /* adjust as needed */
+  height: 225px; /* adjust as needed */
+  border: 3px solid #000;
+  background-color: #f1f1f199;
+  position: relative;
+  margin-top:3rem;
+  margin-bottom:3rem;
+  border-radius:15px;
+}
+.center {
+  margin-top:2.5rem;
+}
+.rpg-btn-group {
+  /* button group styles */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin: 10px;
+}
+.rpg-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.rpg-btn {
+  /* button styles */
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+  padding:0;
+  position: relative;
+  width:15%;
+}
+.rpg-btn:hover {
+  opacity: 0.8;
+  transform: scale(1.1); 
+}
+.grid-row:hover {
+  opacity: 0.7;
+  transform: scale(1.2); 
+}
+
+/* button color styles */
+.rpg-btn-primary {
+  background-color: #007bff;
+}
+
+.rpg-btn-secondary {
+  background-color: #6c757d;
+}
+
+.rpg-btn-tertiary {
+  background-color: #28a745;
+}
+
+.rpg-btn-danger {
+  background-color: #dc3545;
+}
+.health-bar {
+  width: 50%;
+  height: 20px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  margin:0 auto;
+  margin-top: 0.2rem;
+}
+
+.health-bar-inner {
+  height: 100%;
+  background-color: #05C704;
+  color:white;
+  font-weight: bold;
+}
+.mana-bar-inner {
+  height: 100%;
+  background-color: #1978EC;
+  color:white;
+  font-weight: bold;
+}
+.energy-bar-inner {
+  height: 100%;
+  background-color: #F7C500;
+  color:white;
+  font-weight: bold;
+}
+.fury-bar-inner {
+  height: 100%;
+  background-color: #F70000;
+  color:white;
+  font-weight: bold;
+}
+
+.rpg-btn span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight:bold;
+  color:white;
+  background-color: black;
+  margin-bottom:2rem;
+}
+
+.stat-box {
+  margin-top: 0.5rem;
+}
+.rpg-container p {
+  margin-top: 1rem;
+}
+.rpg-text-box img {
+  width:20%;
+  padding:1rem;
+
+}
+:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#grid {
+  max-width: 1280px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap:0.5rem;
+  margin:0 auto;
+  /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); */
+}
+.grid-row {
+  cursor: pointer;
+}
+#equipped_items {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5rem;
+  margin-top: 1rem;
+}
+.enemy_item {
+  margin : 1rem;
+}
+.equipped-item div {
+  cursor:pointer;
+}
+.equipped-item div:hover {
+  opacity: 0.7;
+  transform: scale(1.2); 
+}
